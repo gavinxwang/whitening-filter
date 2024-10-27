@@ -10,3 +10,7 @@
 3. Create some colored noise to input `solveredwv.py` 
 
 <!-- ## Installation -->
+
+## Acknowledgments
+
+If you use this code, please cite *Numerical Recipes in C* (Press et al. 1992) and [Carter & Winn (2009)](https://ui.adsabs.harvard.edu/abs/2009ApJ...704...51C/abstract) and provide a link to this repository.
