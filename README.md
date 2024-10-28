@@ -11,10 +11,18 @@ This library uses likelihood maximization to estimate the red and white noise co
 ## Installation and Usage
 
 1. Clone the repository (e.g., `git clone https://github.com/gavinxwang/whitening-filter.git`).
-2. Run `python setup.py install` to interface the `dwt.c` code with Python. This only needs to be done the first time you use this script. If you want to re-install, you will need to delete the corresponding folder in `site-packages`.
+2. Run `python setup.py install` to interface the `dwt.c` code with Python[^1]. This only needs to be done the first time you use this script. If you want to re-install, you will need to delete the corresponding folder in `site-packages`.
 3. Verify that the setup has been successful by typing `import dwt` in Python.
 4. As a simple test, you can perform the forward wavelet transform of a vector (`dwt.call_wt1(x,1)`) and subsequently the inverse transform (`dwt.call_wt1(c,-1)`) on the coefficients -- you should get back the same input vector.
 5. To whiten colored noise, the function to call is `solveredwv` -- an example pink noise sequence is stored in `vector.txt`.
+
+If you encounter issues in Step 2 due to system/file architectures, something like the following may help: 
+```
+export CFLAGS="-arch x86_64"
+export LDFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
+export CC=/usr/bin/clang
+```
 
 ## Notes
 
