@@ -18,7 +18,7 @@ This library uses likelihood maximization to estimate the red and white noise co
 
 ## Notes
 
-If the filter does not seem to accurately predict the white and red noise components of a time series, try increasing the length of the time series. Additionally, the current code has $\gamma$ fixed at 1 (where $\gamma$ describes the color of the noise, with power 1/f^$\gamma$), but it can be adapted to cases where $\gamma$ deviates (slightly but not too much) from 1. 
+If the filter does not seem to accurately predict the white and red noise components of a time series, try increasing the length of the time series. Additionally, the current code has $\gamma$ fixed at 1 (where $\gamma$ describes the color of the noise, with power 1 / $f^\gamma$), but it can be adapted to cases where $\gamma$ deviates (slightly but not too much) from 1. 
 
 These scripts have been cross-checked with and agree with the IDL implementation of the same routine found [here](https://github.com/zgazak/TAP/tree/master/extra_pro/carter_winn_wavelets).
 
