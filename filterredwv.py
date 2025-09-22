@@ -50,6 +50,9 @@ def filterredwv(x, sigma_r, sigma_w, zeropad=False):
     # Reconstruct the red component (inverse wavelet transform)
     redcomp = dwt.call_wt1(wv, -1)
     
+    if zeropad and (left > 0 or right > 0):
+        redcomp = redcomp[left : left + els]
+    
     return redcomp
 
 '''
